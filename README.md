@@ -80,7 +80,12 @@ Functions from ```pandas_datareader.data``` and ```pandas_datareader.wb``` extra
 
 ### Statistics:
 
-Python’s ```statistics``` is a built-in Python library for descriptive statistics. ```statistics``` provides functions for calculating mathematical statistics of numeric (Real-valued) data.
+Python's ```statistics``` is a built-in Python library for descriptive statistics. ```statistics``` provides functions for calculating mathematical statistics of numeric (Real-valued) data.
+
+### Datetime:
+
+Python's ```datetime``` supplies classes to work with date and time. These classes provide a number of functions to deal with dates, times and time intervals. The datetime module comes built into Python.
+
 
 
 <a name="discl"></a>
