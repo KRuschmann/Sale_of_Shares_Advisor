@@ -4,7 +4,7 @@
 
 ![Image](https://github.com/KRuschmann/Sale_of_Shares_Advisor/blob/master/Image.png?) <br>
 
-As this decision involves a highly complex procedure that requires a considerable amount of time and expertise, we have tried to incorporate this process into a single tool to reduce the time consuming workload of every single investor. If you are curious to learn more about our approach, we encourage you to read on and experience our Stock Investing Advisor yourself!
+As this decision requires a highly complex analysis and a considerable amount of time and expertise, we have tried to incorporate this process into a single tool to reduce the time consuming workload of every single investor. If you are curious to learn more about our approach, we encourage you to read on and experience our Stock Investing Advisor yourself!
 
 1. [ Group Project Members ](#memb)
 2. [ General Information ](#desc)
