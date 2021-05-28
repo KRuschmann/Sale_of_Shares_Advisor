@@ -106,7 +106,7 @@ This valuation model is based on the anticipation of future free cash flows. As 
 
 
 <a name="app"></a>
-## 6. Appendix: Lirbaries Description
+## 6. Appendix: Library Description
 
 ### Pandas:
 
