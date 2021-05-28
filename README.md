@@ -85,19 +85,21 @@ To derive the total WACC, we multiply the respective cost of capital by the prop
 
 ### Step 5: Free Cashflow Projection
 
-In the fourth step the program derives the cost of capital used for discounting future cashflows.  
+Since we do not care about hictorical data, as we are valuing the firm based on the expected future development of the company, we need to predict free cashflows for the projection horizon (in this case for the next 5 years). In order to do that, the program calculates historical cashflow growth rates based on the free cashflows of the past three years (which we calculated in Step 3). To avoid excessively high growth rates due to one-off events, the program takes the lower growth rate or averages out extreme values if necessary.
+
+To take into account the difference between future and present value of free cashflows, the program discounts every single cashflow of each year in the projection horizon back to the present value, using the weighted average cost of capital (WACC) that we calculated in the last step.
 
 ### Step 6: Terminal Value
 
-In the fourth step the program derives the cost of capital used for discounting future cashflows.  
+To account for the 'going concern principle' (the assumption that the company will continue to exist in the future), we need to calculate the terminal value of the firm. Therefore, the program takes the last projected free cashflow (in this case the cashflow of year 5), grows it by the perpetual growth rate and uses the 'Gordon growth formula' to calculate the perpetual value. Discounting this value back to the present value provides us with the terminal value of the company.
 
 ### Step 7: Implied Value per Share
 
-In the fourth step the program derives the cost of capital used for discounting future cashflows.  
+To arrive at the implied value per share, we need to sum up the present values of the projected free cashflows and the terminal value. As we are interested in the equity value of the firm, the program adds the value of the cash from the company's balance sheet and deducts the value of total dept. Dividing this value by the number of shares outstanding we obtain the fair value per share based on our prediction of the development of the firm's future free cashflows.
 
 ### Step 8: Recommendation
 
-In the fourth step the program derives the cost of capital used for discounting future cashflows.   
+In the last step the program provides the user with a recommendation. Depending on the difference between the implied value per share and the current market value of the share, the program indicates whether it considers the stock to be undervalued, overvalued or efficiently priced. In addition, based on this calculation, the program recommends holding, selling or buying the share.
 
 
 <a name="discl"></a>
