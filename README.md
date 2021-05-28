@@ -61,7 +61,7 @@ In this section the program makes some assumptions that are essential for the ex
 
 In order to determine the appropriate risk and the corresponding cost of capital for any company, the program requires the interest rate of a risk-free asset. For this purpose, it assumes a risk-free rate of ```1.60%``` in accordance with the 10 Year US Treasury Rate.
 
-Furthermore, the program requires the perpetual growth rate as an assumption to calculate the terminal value of a company. The perpetual growth rate is the growth rate at which a company is expected to continue growing into eternity. Since it cannot realistically be assumed that companies will continue to grow into perpetuity at high rates, a perpetual growth rate in line with the average growth of the GDP is a reasonable assumption. The program therefore applies a rate of ```3.00%.``` in accordance with the growth rate of the global GDP.
+Furthermore, the program requires the perpetual growth rate as an assumption to calculate the terminal value of a company. The perpetual growth rate is the growth rate at which a company is expected to continue growing into eternity. Since it cannot realistically be assumed that companies will continue to grow into perpetuity at high rates, a perpetual growth rate in line with the average growth of the GDP is a reasonable assumption. The program therefore applies a rate of ```3.00%``` in accordance with the growth rate of the global GDP.
 
 Finally, a time horizon of 5 years is assumed for the projection of future free cashflows. The shorter the projection period, the larger is the contribution of the terminal value to the total value of the company. On the other hand, an excessively long projection period is also not desirable, as it is extremely difficult to reasonably estimate the individual cash flows for each of the future years. Hence, a time span of 5 years provides a reasonable approach in corporate valuations.
 
@@ -71,10 +71,17 @@ The next step is to gather all the historical data of a company that is required
 
 ### Step 4: WACC (Cost of Capital)
 
-In the fourth step the program derives the cost of capital used for discounting future cashflows. The 'weighted average cost of capital' (WACC) consists of the cost of equity and the cost of dept.
+In the fourth step the program derives the cost of capital used for discounting future cashflows. The weighted average cost of capital (WACC) consists of cost of equity and cost of dept.
 
 #### Cost of Equity
-To calculate cost of equity the program uses the CAPM model, which is a widely used tool in Finance. The CAPM is a special regression analysis that plots the returns of the target company (which represents the dependent variable) against the average market returns of the target company's geographical market (which represents the independent variable). To determine a value for the cost of equity, the program pulls the appropriate beta of the stock from the Yahoo Finance API. For average market returns the program identifies where the business is located and automatically calculates the average market returns of the corresponding market index. 
+To calculate cost of equity the program uses the CAPM model, which is a widely used tool in Finance. The CAPM is a special regression analysis that plots the returns of the target company (which represents the dependent variable) against the average market returns of the target company's geographical market (which represents the independent variable). To determine a value for cost of equity, the program pulls the stock's appropriate beta (measure of the individual enterprise risk) from the Yahoo Finance API. For average market returns the program identifies where the business is located and automatically calculates the average market returns of the corresponding market index.
+
+#### Cost of Dept
+There are multiple approaches to calculate a company's cost of dept. For the sake of a reality-based outcome, we have decided to put the interest expense in relation to the average book value of the target company's debt. From this, we compute the company's average interest rate for debt capital.
+
+#### Combined Cost of Capital
+To derive the total WACC, we multiply the respective cost of capital by the proportion of equity or debt in the company and offset the cost of debt against the tax shield. This provides us with the discount rate for the future cashflows.
+
 
 ### Step 5: Free Cashflow Projection
 
@@ -90,7 +97,7 @@ In the fourth step the program derives the cost of capital used for discounting 
 
 ### Step 8: Recommendation
 
-In the fourth step the program derives the cost of capital used for discounting future cashflows.  
+In the fourth step the program derives the cost of capital used for discounting future cashflows.   
 
 
 <a name="discl"></a>
