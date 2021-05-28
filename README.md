@@ -70,12 +70,13 @@ pandas is an open-source, BSD licensed library that enables the provision of eas
 
 numpy is one of the fundamental Python packages for scientific computing, as it provides support for large multidimensional arrays and matrices along with a collection of high-level mathematical functions to execute these functions swiftly. This interface can be utilized for expressing images, sound waves, and other binary raw streams as an array of real numbers in N-dimensional. numpy can also be used as an efficient multi-dimensional container of generic data.
 
-### Yfinance
+### Yfinance:
 
 yfinance is a popular open source library as a means to access the financial data available on Yahoo Finance. Yahoo Finance used to have their own official API, but this was decommissioned on May 15th 2017, following wide-spread misuse of data. These days a range of unofficial APIs and libraries exist to access the same data, including of course yfinance. 
 
-### Pandas_datareader
+### Pandas_datareader:
 
+Functions from pandas_datareader.data and pandas_datareader.wb extract data from various Internet sources into a pandas DataFrame. Currently the following sources are supported: Tiingo, IEX, Alpha Vantage, Enigma, Quandl, St.Louis FED (FRED), Kenneth French’s data library, World Bank, OECD, Eurostat, Thrift Savings Plan, Nasdaq Trader symbol definitions, Stooq, MOEX and Naver Finance.
 
 
 
