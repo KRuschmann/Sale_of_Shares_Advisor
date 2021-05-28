@@ -116,28 +116,28 @@ This valuation model is based on the anticipation of future free cash flows. As 
 
 ### NumPy:
 
-```numpy``` is one of the fundamental Python packages for scientific computing, as it provides support for large multidimensional arrays and matrices along with a collection of high-level mathematical functions to execute these functions swiftly. This interface can be utilized for expressing images, sound waves, and other binary raw streams as an array of real numbers in N-dimensional. ```numpy``` can also be used as an efficient multi-dimensional container of generic data. [1](https://github.com/jianjian97/Swiss-Geography-Master)
+```numpy``` is one of the fundamental Python packages for scientific computing, as it provides support for large multidimensional arrays and matrices along with a collection of high-level mathematical functions to execute these functions swiftly. This interface can be utilized for expressing images, sound waves, and other binary raw streams as an array of real numbers in N-dimensional. ```numpy``` can also be used as an efficient multi-dimensional container of generic data. [(1)](https://github.com/jianjian97/Swiss-Geography-Master)
 
 ### Yfinance:
 
-```yfinance``` is a popular open source library as a means to access the financial data available on Yahoo Finance. Yahoo Finance used to have their own official API, but this was decommissioned in 2017. A range of unofficial APIs and libraries have taken its place to access the same data, including of course yfinance. [2](https://algotrading101.com/learn/yfinance-guide/)
+```yfinance``` is a popular open source library as a means to access the financial data available on Yahoo Finance. Yahoo Finance used to have their own official API, but this was decommissioned in 2017. A range of unofficial APIs and libraries have taken its place to access the same data, including of course yfinance. [(2)](https://algotrading101.com/learn/yfinance-guide/)
 
 ### Pandas_datareader:
 
-Functions from ```pandas_datareader.data``` and ```pandas_datareader.wb``` extract data from various Internet sources into a pandas DataFrame. Currently the following sources are supported: Tiingo, IEX, Alpha Vantage, Enigma, Quandl, St.Louis FED (FRED), Kenneth French’s data library, World Bank, OECD, Eurostat, Thrift Savings Plan, Nasdaq Trader symbol definitions, Stooq, MOEX and Naver Finance. [3](https://pandas-datareader.readthedocs.io/en/latest/remote_data.html)
+Functions from ```pandas_datareader.data``` and ```pandas_datareader.wb``` extract data from various Internet sources into a pandas DataFrame. Currently the following sources are supported: Tiingo, IEX, Alpha Vantage, Enigma, Quandl, St.Louis FED (FRED), Kenneth French’s data library, World Bank, OECD, Eurostat, Thrift Savings Plan, Nasdaq Trader symbol definitions, Stooq, MOEX and Naver Finance. [(3)](https://pandas-datareader.readthedocs.io/en/latest/remote_data.html)
 
 ### Statistics:
 
-Python's ```statistics``` is a built-in Python library for descriptive statistics. ```statistics``` provides functions for calculating mathematical statistics of numeric (Real-valued) data. [4](https://realpython.com/python-statistics/)
+Python's ```statistics``` is a built-in Python library for descriptive statistics. ```statistics``` provides functions for calculating mathematical statistics of numeric (Real-valued) data. [(4)](https://realpython.com/python-statistics/)
 
 ### Datetime:
 
-Python's ```datetime``` supplies classes to work with date and time. These classes provide a number of functions to deal with dates, times and time intervals. The datetime module comes built into Python. [5](https://www.geeksforgeeks.org/python-datetime-module-with-examples/)
+Python's ```datetime``` supplies classes to work with date and time. These classes provide a number of functions to deal with dates, times and time intervals. The datetime module comes built into Python. [(5)](https://www.geeksforgeeks.org/python-datetime-module-with-examples/)
 
 ### Statsmodels:
 
-```statsmodels``` is a Python module that provides classes and functions for the estimation of many different statistical models, as well as for conducting statistical tests, and statistical data exploration. An extensive list of result statistics are available for each estimator. [6](https://www.statsmodels.org/stable/index.html)
+```statsmodels``` is a Python module that provides classes and functions for the estimation of many different statistical models, as well as for conducting statistical tests, and statistical data exploration. An extensive list of result statistics are available for each estimator. [(6)](https://www.statsmodels.org/stable/index.html)
 
 ### Matplotlib:
-```matplotlib``` is a comprehensive library for creating static, animated, and interactive visualizations in Python. ```matplotlib.pyplot``` is a collection of functions that make matplotlib work like MATLAB (alternative programming language). Each pyplot function makes some change to a figure: e.g., creates a figure, creates a plotting area in a figure, plots some lines in a plotting area, decorates the plot with labels, etc. [7](https://matplotlib.org/stable/tutorials/introductory/pyplot.html)
+```matplotlib``` is a comprehensive library for creating static, animated, and interactive visualizations in Python. ```matplotlib.pyplot``` is a collection of functions that make matplotlib work like MATLAB (alternative programming language). Each pyplot function makes some change to a figure: e.g., creates a figure, creates a plotting area in a figure, plots some lines in a plotting area, decorates the plot with labels, etc. [(7)](https://matplotlib.org/stable/tutorials/introductory/pyplot.html)
 
