@@ -4,7 +4,7 @@
 As this decision involves a highly complex procedure that requires a considerable amount of time and expertise, we have tried to incorporate this process into a single tool to reduce the time consuming workload of every single investor. If you are curious to learn more about our approach, we encourage you to read on and experience our Sale of Shares Advisor yourself!
 
 ![Image]
-(https://github.com/KRuschmann/Sale_of_Shares_Advisor/Buy-Sell-Hold-Image.png)
+(https://github.com/KRuschmann/Sale_of_Shares_Advisor/blob/master/Buy-Sell-Hold-Image.png?raw=true)
 
 1. [ Group Project Members ](#memb)
 2. [ General Information ](#desc)
