@@ -72,7 +72,7 @@ In this section the program makes some assumptions that are essential for the ex
 
 ### Yfinance:
 
-```yfinance``` is a popular open source library as a means to access the financial data available on Yahoo Finance. Yahoo Finance used to have their own official API, but this was decommissioned on May 15th 2017, following wide-spread misuse of data. These days a range of unofficial APIs and libraries exist to access the same data, including of course yfinance. 
+```yfinance``` is a popular open source library as a means to access the financial data available on Yahoo Finance. Yahoo Finance used to have their own official API, but this was decommissioned in 2017. A range of unofficial APIs and libraries have taken its place to access the same data, including of course yfinance. 
 
 ### Pandas_datareader:
 
