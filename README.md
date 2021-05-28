@@ -4,7 +4,7 @@
 To make this task easier for them we have developed the "Sale of Shares Advisor". 
 
 ![Image]
-(https://octodex.github.com/images/Buy-Sell-Hold-Image.jpg)
+(https://octodex.github.com/images/Buy-Sell-Hold-Image.png)
 (https://github.com/KRuschmann/Sale_of_Shares_Advisor/Buy-Sell-Hold-Image.jpg)
 
 1. [ Group Project Members. ](#memb)
