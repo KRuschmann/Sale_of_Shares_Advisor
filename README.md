@@ -10,8 +10,8 @@ As this decision requires a highly complex analysis and a considerable amount of
 2. [ General Information ](#desc)
 3. [ Technologies/Setup ](#usage)
 4. [ Code Structure ](#code)
-5. [ Appendix: Libraries Description ](#app)
-6. [ Disclaimer ](#discl)
+5. [ Disclaimer ](#discl)
+6. [ Appendix: Libraries Description ](#app)
 
 
 <a name="memb"></a>
@@ -47,20 +47,59 @@ $ pip install matplotlib.pyplot
 
 <a name="code"></a>
 ## 4. Code Structure
-### Step 0
+
+### Step 0: Framework
 Prior to getting started it is vital to install and import all the required libraries that are listed in the chapters above. Disregarding this step will lead to an incorrect execution of this program.
 
-### Step 1
+### Step 1: Input
 
 The first step is to enter the desired stock ticker (e.g. 'AAPL' for Apple Inc. or 'MSFT' for Microsoft Corporation). Please note that for some smaller companies there is not enough data available to value the stock based on a DCF valuation. In this case, the program will display a corresponding error message.
 
-### Step 2
+### Step 2: Assumptions
 
 In this section the program makes some assumptions that are essential for the excecution of the valuation process.
 
+In order to determine the appropriate risk and the corresponding cost of capital for any company, the program requires the interest rate of a risk-free asset. For this purpose, it assumes a risk-free rate of ```1.60%``` in accordance with the 10 Year US Treasury Rate.
+
+Furthermore, the program requires the perpetual growth rate as an assumption to calculate the terminal value of a company. The perpetual growth rate is the growth rate at which a company is expected to continue growing into eternity. Since it cannot realistically be assumed that companies will continue to grow into perpetuity at high rates, a perpetual growth rate in line with the average growth of the GDP is a reasonable assumption. The program therefore applies a rate of ```3.00%.``` in accordance with the growth rate of the global GDP.
+
+Finally, a time horizon of 5 years is assumed for the projection of future free cashflows. The shorter the projection period, the larger is the contribution of the terminal value to the total value of the company. On the other hand, an excessively long projection period is also not desirable, as it is extremely difficult to reasonably estimate the individual cash flows for each of the future years. Hence, a time span of 5 years provides a reasonable approach in corporate valuations.
+
+### Step 3: Historical data & Free Cashflows
+
+The next step is to gather all the historical data of a company that is required for the valuation process. The program automatically collects all the necessary figures (such as historical EBIT, Tax expenses, D&A, Capex and changes in Net Working Capital) and calculates the free cashflows of the past three years.
+
+### Step 4: WACC (Cost of Capital)
+
+In the fourth step the program derives the cost of capital used for discounting future cashflows. The 'weighted average cost of capital' (WACC) consists of the cost of equity and the cost of dept.
+
+#### Cost of Equity
+To calculate cost of equity the program uses the CAPM model, which is a widely used tool in Finance. The CAPM is a special regression analysis that plots the returns of the target company (which represents the dependent variable) against the average market returns of the target company's geographical market (which represents the independent variable). To determine a value for the cost of equity, the program pulls the appropriate beta of the stock from the Yahoo Finance API. For average market returns the program identifies where the business is located and automatically calculates the average market returns of the corresponding market index. 
+
+### Step 5: Free Cashflow Projection
+
+In the fourth step the program derives the cost of capital used for discounting future cashflows.  
+
+### Step 6: Terminal Value
+
+In the fourth step the program derives the cost of capital used for discounting future cashflows.  
+
+### Step 7: Implied Value per Share
+
+In the fourth step the program derives the cost of capital used for discounting future cashflows.  
+
+### Step 8: Recommendation
+
+In the fourth step the program derives the cost of capital used for discounting future cashflows.  
+
+
+<a name="discl"></a>
+## 5. Disclaimer
+This valuation model is based on the anticipation of future free cash flows. As with any intrinsic valuation method, it is essential to bear in mind that valuations are not equally applicable to all businesses. While some companies do not even meet the required criteria (e.g. generating positive cash flows), other companies' values are not directly linked to the generation of free cash flows (e.g. Tesla and other companies that are experiencing hype for various reasons). Therefore, it is important to consider the individual context of each company in order to correctly implement the output of this DCF valuation. The delivered value should never be considered as an isolated basis in any decision-making process.
+
 
 <a name="app"></a>
-## 5. Appendix: Lirbaries Description
+## 6. Appendix: Lirbaries Description
 
 ### Pandas:
 
@@ -87,7 +126,3 @@ Python's ```statistics``` is a built-in Python library for descriptive statistic
 Python's ```datetime``` supplies classes to work with date and time. These classes provide a number of functions to deal with dates, times and time intervals. The datetime module comes built into Python.
 
 
-
-<a name="discl"></a>
-## 6. Disclaimer
-This valuation model is based on the anticipation of future free cash flows. As with any intrinsic valuation method, it is essential to bear in mind that valuations are not equally applicable to all businesses. While some companies do not even meet the required criteria (e.g. generating positive cash flows), other companies' values are not directly linked to the generation of free cash flows (e.g. Tesla and other companies that are experiencing hype for various reasons). Therefore, it is important to consider the individual context of each company in order to correctly implement the output of this DCF valuation. The delivered value should never be considered as an isolated basis in any decision-making process.
