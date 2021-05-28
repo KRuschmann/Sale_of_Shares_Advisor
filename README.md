@@ -10,7 +10,7 @@ To make this task easier for them we have developed the "Sale of Shares Advisor"
 5. [ Appendix: Libraries Description. ](#app)
 
 <a name="memb"></a>
-## 1. Group Project Members:
+## 1. Group Project Members
 - Lucas Jutzi
 - Lukas Kevic-Niederer
 - Katharina Ruschmann
