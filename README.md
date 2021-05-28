@@ -1,4 +1,4 @@
-# Group Project: Programming with Advanced Computer Languages
+# Group Project: Sale of Shares Advisor
 
 "Buy or Sell?" A common questions share holders constantly deal with. <br>
 To make this task easier for you we have developed the "Sale of Shares Advisor". 
