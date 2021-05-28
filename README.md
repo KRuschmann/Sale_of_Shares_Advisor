@@ -1,28 +1,31 @@
 # Group Project: Programming with Advanced Computer Languages
 
-"Buy or Sell?" A common questions share holders constantly deal with.
+"Buy or Sell?" A common questions share holders constantly deal with. <br>
 To make this task easier for you we have developed the "Sale of Shares Advisor". 
 
-1. [ Description. ](#desc)
-2. [ Usage tips. ](#usage)
+1. [ Group Project Members. ](#memb)
+2. [ General Information. ](#desc)
+3. [ Technologies/Setup. ](#usage)
+4. [ Code Structure. ](#code)
+5. [ Appendix: Libraries Description. ](#app)
 
-<a name="desc"></a>
-## 1. Description
-
-sometext
-
-<a name="usage"></a>
-## 2. Usage tips
-
-## Group Project Members:
+<a name="memb"></a>
+## 1. Group Project Members:
 - Lucas Jutzi
 - Lukas Kevic-Niederer
 - Katharina Ruschmann
 - Samuel Weber
 
-## Programming Language:
-Python 3
+<a name="desc"></a>
+## 2. General Information
 
-## Project Description:
+<a name="usage"></a>
+## 3. Technologies/Setup
 
-We have developed a "Sale of Shares Advisor" based on the Disounted Cash-Flow (DCF) method.
+<a name="code"></a>
+## 4. Code Structure
+
+
+<a name="app"></a>
+## 5. Appendix: Lirbaries Description
+
