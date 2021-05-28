@@ -1,4 +1,4 @@
-# Group Project: Sale of Shares Advisor
+# Group Project: Stock Investing Advisor
 
 "Hold, Buy or Sell?" A common question share holders constantly deal with. <br>
 
@@ -23,7 +23,7 @@ As this decision involves a highly complex procedure that requires a considerabl
 
 <a name="desc"></a>
 ## 2. General Information
-This student project "Sales of Shares Advisor" is part of the course "Programming - Introduction Level" by Mario Silic at the University of St. Gallen (HSG). The purpose of this project is a fundamental analysis of publicly listed companies in order to determine whether a stock is efficiently priced and should therefore be purchased. This is based on an automated process of calculating and analyzing future free cash flows (DCF analysis), which is industry standard in the financial sector and many other industries.
+This student project "Stock Investing Advisor" is part of the course "Programming - Introduction Level" by Mario Silic at the University of St. Gallen (HSG). The purpose of this project is a fundamental analysis of publicly listed companies in order to determine whether a stock is efficiently priced and should therefore be purchased. This is based on an automated process of calculating and analyzing future free cash flows (DCF analysis), which is industry standard in the financial sector and many other industries.
 
 <a name="usage"></a>
 ## 3. Technologies/Setup
