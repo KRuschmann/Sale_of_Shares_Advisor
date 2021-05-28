@@ -62,6 +62,16 @@ In this section the program makes some assumptions that are essential for the ex
 <a name="app"></a>
 ## 5. Appendix: Lirbaries Description
 
+### Pandas:
+
+pandas is an open-source, BSD licensed library that enables the provision of easy data structure and quicker data analysis for Python. For operations like data analysis and modelling, pandas makes it possible to carry these out without needing to switch to more domain-specific language like R. Support for operations such as re-indexing, iteration, sorting, aggregations, concatenations and visualizations are among the feature highlights of pandas.
+
+### NumPy:
+
+numpy is one of the fundamental Python packages for scientific computing, as it provides support for large multidimensional arrays and matrices along with a collection of high-level mathematical functions to execute these functions swiftly. This interface can be utilized for expressing images, sound waves, and other binary raw streams as an array of real numbers in N-dimensional. numpy can also be used as an efficient multi-dimensional container of generic data.
+
+
+
 
 <a name="discl"></a>
 ## 6. Disclaimer
