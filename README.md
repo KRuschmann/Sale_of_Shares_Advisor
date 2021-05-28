@@ -125,4 +125,7 @@ Python's ```statistics``` is a built-in Python library for descriptive statistic
 
 Python's ```datetime``` supplies classes to work with date and time. These classes provide a number of functions to deal with dates, times and time intervals. The datetime module comes built into Python.
 
+### Statsmodels:
+
+```statsmodels``` is a Python module that provides classes and functions for the estimation of many different statistical models, as well as for conducting statistical tests, and statistical data exploration. An extensive list of result statistics are available for each estimator. 
 
