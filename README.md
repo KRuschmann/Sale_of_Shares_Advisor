@@ -31,7 +31,7 @@ This student project "Stock Investing Advisor" is part of the course "Programmin
 - JupytherLab: Please refer to https://jupyter.org/install to install JupytherLab.
 - Required libraries: ```numpy``` ```pandas``` ```yfinance``` ```pandas_datareader``` ```statistics``` ```datetime``` ```statsmodels.api``` ```matplotlib.pyplot```
 
-In order to properly use our Stock Investing Advisor, it is essential to have installed the above listed libraries prior to running this program. To install the libraries, please use PowerShell in Anaconda with the following commands:
+In order to properly use our Stock Investing Advisor, it is essential to have installed the above listed libraries prior to running this program. To install the libraries, you can use PowerShell in Anaconda with the following commands:
 
 ```
 $ pip install numpy
