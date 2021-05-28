@@ -3,6 +3,8 @@
 "Hold, Buy or Sell?" A common questions share holders constantly deal with. <br>
 To make this task easier for them we have developed the "Sale of Shares Advisor". 
 
+![Image] (Buy-Hold-Sell-Image.jpeg)
+
 1. [ Group Project Members. ](#memb)
 2. [ General Information. ](#desc)
 3. [ Technologies/Setup. ](#usage)
