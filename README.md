@@ -78,6 +78,9 @@ In this section the program makes some assumptions that are essential for the ex
 
 Functions from ```pandas_datareader.data``` and ```pandas_datareader.wb``` extract data from various Internet sources into a pandas DataFrame. Currently the following sources are supported: Tiingo, IEX, Alpha Vantage, Enigma, Quandl, St.Louis FED (FRED), Kenneth French’s data library, World Bank, OECD, Eurostat, Thrift Savings Plan, Nasdaq Trader symbol definitions, Stooq, MOEX and Naver Finance.
 
+### Statistics:
+
+Python’s ```statistics``` is a built-in Python library for descriptive statistics. ```statistics``` provides functions for calculating mathematical statistics of numeric (Real-valued) data.
 
 
 <a name="discl"></a>
