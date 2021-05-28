@@ -1,6 +1,6 @@
 # Group Project: Sale of Shares Advisor
 
-"Buy, Hold or Sell?" A common question share holders constantly deal with. <br>
+"Hold, Buy or Sell?" A common question share holders constantly deal with. <br>
 
 ![Image](https://github.com/KRuschmann/Sale_of_Shares_Advisor/blob/master/Image.png?) <br>
 
