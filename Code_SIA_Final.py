@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 #import packages
 import numpy as np
 import pandas as pd
@@ -13,9 +10,6 @@ import statistics as stats
 import datetime as dt
 import statsmodels.api as sm
 import matplotlib.pyplot as plt
-
-# In[2]:
-
 
 #identify stock
 while True:
@@ -30,15 +24,7 @@ while True:
         break
 
 
-
-# In[3]:
-
-
 stock = yf.Ticker(stock_input)
-
-
-
-# In[4]:
 
 
 def info_check(stock):
@@ -66,10 +52,6 @@ def info_check(stock):
 info_check(stock)
 
 
-
-# In[5]:
-
-
 #set name and ticker of chosen stock
 ticker = stock.info['symbol']
 name = stock.info['shortName']
@@ -80,9 +62,6 @@ start = end - dt.timedelta(days=365)
 stock_prices = yf.download(ticker, start, end)
 #show the data
 stock_prices
-
-
-# In[6]:
 
 
 #summary statistics
@@ -116,10 +95,6 @@ def summary_stats(data):
 summary_stats(stock_prices)
 
 
-
-# In[7]:
-
-
 #visualization of stock price development
 plt.figure(figsize = (13.5,9))
 stock_prices['Adj Close'].plot(linewidth=2.0, color = 'g')
@@ -129,9 +104,6 @@ plt.show()
 
 
 
-# In[8]:
-
-
 #assumptions
 perpetual_rate = 0.03
 riskfree_rate = 0.016
@@ -139,9 +111,6 @@ riskfree_rate = 0.016
 #projection horizon
 years = [1, 2, 3, 4, 5]
 
-
-
-# In[9]:
 
 
 #get historical data
@@ -170,18 +139,11 @@ for y in range(0,3):
     free_cashflows_list.append(freecashflow)
 
 
-
-# In[10]:
-
-
 ##Calculate Cost of Capital
     
 #capital structure
 Equity = stock.balance_sheet.loc['Total Stockholder Equity'].iloc[0] / stock.balance_sheet.loc['Total Assets'].iloc[0]
 Dept = stock.balance_sheet.loc['Total Liab'].iloc[0] / stock.balance_sheet.loc['Total Assets'].iloc[0]
-
-
-# In[11]:
 
 
 #cost of equity
@@ -223,10 +185,6 @@ except ValueError:
     cost_equity = yrly_stock_return.mean()
 
 
-
-# In[12]:
-
-
 #cost of dept
 histcl_ebit = [stock.financials.loc['Ebit'].iloc[0],
                stock.financials.loc['Ebit'].iloc[1],
@@ -247,25 +205,13 @@ for c in coverage_ratios:
 cost_dept = riskfree_rate + spread
 
 
-
-# In[13]:
-
-
 #tax shield
 tax_rate = tax_expense / (ebit - stock.financials.loc['Interest Expense'].iloc[0])
 tax_shield = 1 - tax_rate
 
 
-# In[14]:
-
-
 #combinded
 WACC = cost_equity * Equity + cost_dept * Dept * tax_shield
-
-
-
-
-# In[15]:
 
 
 #cashflow growth rate
@@ -285,10 +231,6 @@ else:
     cashflow_growthrate = stats.mean(histcl_cashflow_growthrates)
 
 
-
-# In[16]:
-
-
 #predict future cashflows
 future_freecashflow = []
 
@@ -298,9 +240,6 @@ for year in years:
         future_freecashflow.append(cashflow)
     else:
         future_freecashflow.append(0)
-
-
-# In[17]:
 
 
 #discount the future free cashflows
@@ -315,10 +254,6 @@ for x in range(0, len(years)):
     discounted_future_freecashflow.append(future_freecashflow[x] / discountfactor[x])
 
 
-
-# In[18]:
-
-
 #determine the gordon growth rate
 if WACC - perpetual_rate > perpetual_rate:
     gordon_growth_rate = WACC - perpetual_rate
@@ -329,8 +264,6 @@ else:
 terminal_value = future_freecashflow[-1] * (1 + perpetual_rate) / (gordon_growth_rate)
 
 
-# In[19]:
-
 
 #discount the terminal value
 discounted_terminal_value = terminal_value / discountfactor[-1] ** years[-1]
@@ -338,11 +271,6 @@ discounted_terminal_value = terminal_value / discountfactor[-1] ** years[-1]
 #append the discounted future free cashflows list with the discounted terminal value
 discounted_future_freecashflow.append(discounted_terminal_value)
 
-
-
-
-
-# In[20]:
 
 
 #get instrinsic value
@@ -362,17 +290,8 @@ shares_outstanding = stock.info['sharesOutstanding']
 fairvalue_per_share = round(equity_value / shares_outstanding, 2)
 
 
-
-# In[21]:
-
-
 #current stock price
 current_shareprice = stock.info['previousClose']
-
-
-
-
-# In[22]:
 
 
 #Recommendation
@@ -386,9 +305,6 @@ elif fairvalue_per_share < current_shareprice:
     advice = "SELL"
 else:
     advice = "HOLD"
-
-
-# In[23]:
 
 
 #Conclusion
@@ -406,9 +322,6 @@ elif fairvalue_per_share < current_shareprice:
     concl = "highly overvalued"
 else:
     concl = "efficient pricing"
-
-
-# In[24]:
 
 
 #final output
