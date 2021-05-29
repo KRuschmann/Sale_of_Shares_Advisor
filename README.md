@@ -101,11 +101,11 @@ To account for the 'going concern principle' (the assumption that the company wi
 
 To arrive at the implied value per share, we need to sum up the present values of the projected free cashflows and the terminal value. As we are interested in the equity value of the firm, the program adds the value of the cash from the company's balance sheet and deducts the value of total dept. Dividing this value by the number of shares outstanding we obtain the fair value per share based on our prediction of the development of the firm's future free cashflows.
 
-### Step 10: Current Share Price
+### Step 9: Current Share Price
 
 Collect the current market value of the share as basis for the recommendation of the "Stock Investing Advisor".
 
-### Step 9: Recommendation
+### Step 10: Recommendation
 
 In the last step the program provides the user with a recommendation. Depending on the difference between the implied value per share and the current market value of the share, the program indicates whether it considers the stock to be undervalued, overvalued or efficiently priced. In addition, based on this calculation, the program recommends holding, selling or buying the share.
 
