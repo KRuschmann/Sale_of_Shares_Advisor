@@ -75,6 +75,7 @@ def info_check(stock):
         print("Please input a valid stock ticker")
     try:
         stock.balance_sheet.loc['Inventory'].iloc[1]
+        stock.cashflow.loc['Capital Expenditures'].iloc[1]
         print("Our 'Sale of Shares Advisor' is appropriate for the chosen stock!")
     except KeyError:
         print("Our 'Sale of Shares Advisor' is not appropriate for Banks and Financial Institutions!")
@@ -293,17 +294,23 @@ print('Cost of equity:\n {}'.format(cost_equity))
 
 
 #cost of dept
-histcl_interest_expense = [stock.financials.loc['Interest Expense'].iloc[0], 
-                           stock.financials.loc['Interest Expense'].iloc[1], 
+histcl_ebit = [stock.financials.loc['Ebit'].iloc[0],
+               stock.financials.loc['Ebit'].iloc[1],
+               stock.financials.loc['Ebit'].iloc[2]]
+avg_ebit = stats.mean(histcl_ebit)
+histcl_interest_expense = [stock.financials.loc['Interest Expense'].iloc[0],
+                           stock.financials.loc['Interest Expense'].iloc[1],
                            stock.financials.loc['Interest Expense'].iloc[2]]
 avg_interest_expense = stats.mean(histcl_interest_expense)
-
-histcl_dept_balance = [stock.balance_sheet.loc["Long Term Debt"].iloc[0],
-                       stock.balance_sheet.loc["Long Term Debt"].iloc[1],
-                       stock.balance_sheet.loc["Long Term Debt"].iloc[2]]
-avg_dept_balance = stats.mean(histcl_dept_balance)
-
-cost_dept = abs(avg_interest_expense / avg_dept_balance)
+interest_coverage_ratio = abs(avg_ebit / avg_interest_expense)
+coverage_ratios = [8.50, 6.50, 5.50, 4.25, 3.00, 2.50, 2.25, 2.00, 1.75, 1.50, 1.25, 0.80, 0.65, 0.20]
+for c in coverage_ratios:
+    if interest_coverage_ratio > c:
+        spread = (10 - c) / 100
+        break
+    else:
+        spread = 0.15
+cost_dept = riskfree_rate + spread
 
 #present cost of dept
 print('Cost of dept:\n {}'.format(cost_dept))
@@ -399,10 +406,10 @@ print('Discounted future free cashflows:\n {}'.format(discounted_future_freecash
 
 
 #determine the gordon growth rate
-if WACC - perpetual_rate > 0:
+if WACC - perpetual_rate > perpetual_rate:
     gordon_growth_rate = WACC - perpetual_rate
 else:
-    gordon_growth_rate = 0.01
+    gordon_growth_rate = perpetual_rate
 
 #calculate terminal value and discount the terminal value
 terminal_value = future_freecashflow[-1] * (1 + perpetual_rate) / (gordon_growth_rate)
@@ -522,3 +529,5 @@ print("  -> Current Share Price: " + str(current_shareprice) + " " + str(stock.i
 print("")
 print("---------------------------------------------------")
 
+
+# For a more detailed description of the single code elements please have a look at our [README.md](https://github.com/KRuschmann/Stock_Investing_Advisor/blob/master/README.md)
