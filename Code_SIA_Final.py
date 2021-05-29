@@ -78,7 +78,7 @@ def info_check(stock):
         stock.cashflow.loc['Capital Expenditures'].iloc[1]
         print("Our 'Stock Investing Advisor' is appropriate for the chosen stock!")
     except KeyError:
-        print("Our 'Stock Investing Advisor' not appropriate for Banks and Financial Institutions!")
+        print("Our 'Stock Investing Advisor' is not appropriate for Banks and Financial Institutions!")
 info_check(stock)
 
 
