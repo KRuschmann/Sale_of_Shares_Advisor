@@ -57,7 +57,7 @@ The first step is to enter the desired stock ticker (e.g. 'AAPL' for Apple Inc. 
 
 ### Step 2: Descriptive Statistics & Stock Price Development
 
-After the user has chosen a stock for the valuation the program provides some descriptive statistics such as the mean, standard deviation, variance, minimum and maximum of the stock price and stock trading volume during the last year. Additionally, the program visualizes the adjusted closing price development over the same time period.
+After the user has chosen a stock for the valuation the program provides some descriptive statistics such as the mean, standard deviation, variance, minimum and maximum of the stock price and stock trading volume during the last year. Additionally, the program visualizes the adjusted closing price development for the same time period.
 
 ### Step 3: Assumptions
 
@@ -71,17 +71,17 @@ Finally, a time horizon of ```5 years``` is assumed for the projection of future
 
 ### Step 4: Historical Data & Free Cashflows
 
-The next step is to gather all the historical data of a company that is required for the valuation process. The program automatically collects all the necessary figures (such as historical EBIT, Tax expenses, D&A, Capex and changes in Net Working Capital) from the Yahoo Finance API and calculates the free cashflows of the past three years.
+The next step is to gather all the historical data of a company that is required for the valuation process. The program automatically collects all the necessary figures (such as historical EBIT, Tax expenses, D&A, Capex and changes in Net Working Capital) from the Yahoo! Finance API and calculates the free cashflows of the past three years.
 
 ### Step 5: WACC (Cost of Capital)
 
 In the fourth step the program derives the cost of capital used for discounting future cashflows. The weighted average cost of capital (WACC) consists of cost of equity and cost of dept.
 
 #### Cost of Equity
-To calculate cost of equity the program uses the CAPM model, which is a widely used tool in Finance. The CAPM is a special regression analysis that plots the returns of the target company (which represents the dependent variable) against the average market returns of the target company's geographical market (which represents the independent variable). To determine a value for cost of equity, the program pulls the stock's appropriate beta (measure of the individual enterprise risk) from the Yahoo Finance API. For average market returns the program identifies where the business is located and automatically calculates the average market returns of the corresponding market index.
+To calculate cost of equity the program uses the CAPM model, which is a widely used tool in Finance. The CAPM is a special regression analysis that plots the returns of the target company (which represent the dependent variable) against the average market returns of the target company's geographical market (which represents the independent variable). To determine a value for cost of equity, the program pulls the stock's appropriate beta (measure of the individual enterprise risk) from the Yahoo! Finance API. For average market returns the program identifies where the business is located and automatically calculates the average market returns of the corresponding market index.
 
 #### Cost of Dept
-There are multiple approaches to calculate a company's cost of dept. For the sake of a reality-based outcome, we have decided to put the interest expense in relation to the average book value of the target company's debt. From this, we compute the company's average interest rate for debt capital.
+There are multiple approaches to calculate a company's cost of dept. To ensure excellent results across a wide range of companies, we have decided to use the credit default risk as a measure of the company's cost of dept. As not all companies have an official credit rating available, we are calculating a synthetic credit rating for the target company based on its interest coverage ratio. Therefore, we put the average operating income before interest payments in relation to the average company's interest expenses. From this, we can derive the associated credit rating and based on that the corresponding credit spread. Now we can compute the company's cost of dept by adding the credit spread to the risk-free rate.
 
 #### Combined Cost of Capital
 To derive the total WACC, we multiply the respective cost of capital by the proportion of equity or debt in the company and offset the cost of debt against the tax shield. This provides us with the discount rate for the future cashflows.
