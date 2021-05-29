@@ -1,10 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # 0. Preparation
-# 
-# Prior to getting started it is vital to install and import all the required libraries for the project.
-
 # In[1]:
 
 
@@ -17,14 +13,6 @@ import statistics as stats
 import datetime as dt
 import statsmodels.api as sm
 import matplotlib.pyplot as plt
-
-
-# # 1. Input
-# 
-# The first step is to ask the user of the "Stock Investing Advisor" to enter the desired stock ticker.
-# <br>**For example:** 'AAPL' for Apple Inc. or 'MSFT' for Microsoft Corporation <br>
-# 
-# If the user enters an invalid stock ticker display an error message and ask the user to enter a valid stock ticker.
 
 # In[2]:
 
@@ -42,7 +30,6 @@ while True:
         break
 
 
-# Use the Yahoo! Finace market data downloader and the Ticker module in order to access the ticker data of the chosen stock.
 
 # In[3]:
 
@@ -50,9 +37,6 @@ while True:
 stock = yf.Ticker(stock_input)
 
 
-# Now inform the user about the company name according to the chosen stock ticker and indicate if the 'Stock Investing Advisor" is appropriate for the chosen stock.<br>
-# 
-# (The DCF method only is appropiate for business valuations. But not for the valuation of banks and financial istitutions, as financial institutions are highly levered and they do not re-invest debt in the business and instead use it to create products.)
 
 # In[4]:
 
@@ -82,9 +66,6 @@ def info_check(stock):
 info_check(stock)
 
 
-# # 2. Descriptive Statistics & Share Price Development
-# 
-# Provide some descriptive statistics such as the mean, standard deviation, variance, minimum and maximum of the stock price and stock trading volume during the last year.
 
 # In[5]:
 
@@ -135,7 +116,6 @@ def summary_stats(data):
 summary_stats(stock_prices)
 
 
-# Visualizes the adjusted closing price development over the last year.
 
 # In[7]:
 
@@ -148,9 +128,6 @@ plt.ylabel('Adj Close')
 plt.show()
 
 
-# # 3. Assumptions
-# 
-# Make some assumptions that are essential for the excecution of the valuation process.
 
 # In[8]:
 
@@ -166,20 +143,6 @@ years = [1, 2, 3, 4, 5]
 print('Assumptions\nPerpetual rate: {} \nRiskree rate: {} \nProjection horizon: {}'.format(perpetual_rate, riskfree_rate, years))
 
 
-# # 4. Historical Data & Free Cashflows
-# Collect the historical data for all parameters and calculate the free cashflows of the past 3 years.<br>
-# 
-# **FCFF Formula:** <br>
-# 
-# > FCFF = EBIT - Taxes + D&A Expense - CapEx - Δ Net WC
-# 
-# **FCFF Parameters:**
-# - FCFF = Free Cash Flow to Firm
-# - EBIT = Earnings before Interest and Taxes
-# - Taxes = Cash Taxes
-# - D&A Expense = Depreciation and Amortization expense
-# - CapEx = Capital Expenditures
-# - Δ Net WC = Changes in Net Working Capital
 
 # In[9]:
 
@@ -211,28 +174,6 @@ for y in range(0,3):
 
 #present historical free cashflows of the last three years
 print('Historical free cashflows (past 3 years):\n {}'.format(free_cashflows_list))
-
-
-# # 5. Cost of Capital (WACC)
-# Calculate the Cost of Capital (WACC), the discount rate for the future free cashflows.<br>
-# 
-# **WACC Forumula:**
-# > WACC = (D/D+E) * (1-t)*rd + (E/D+E) * (1-t)*re
-# 
-# **WACC Parameters:**
-# - WACC = Cost of Capital
-# - D = Value of Dept
-# - E = Value of Equity
-# - D+E = Value of Firm
-# - (D/D+E) = Dept Share
-# - (E/D+E) = Equity Share
-# - rd = Posttax Cost of Dept
-# - re = Cost of Equity
-# - t = Tax Rate
-
-# In[ ]:
-
-
 
 
 
@@ -343,9 +284,6 @@ WACC = cost_equity * Equity + cost_dept * Dept * tax_shield
 print('WACC:\n {}'.format(WACC))
 
 
-# # 6. Cashflow Growth Rate & Free Cashflow Projection
-# 
-# Calculate the historical cashflow growth rates based on the free cashflows of the past three years and predict free cashflows for the projection horizon (in this case for the next 5 years). Afterwards dicount the future free cashflows with the Cost of Capital (WAAC).
 
 # In[15]:
 
@@ -404,9 +342,6 @@ for x in range(0, len(years)):
 print('Discounted future free cashflows:\n {}'.format(discounted_future_freecashflow))
 
 
-# # 7. Terminal Value
-# 
-# Calculate the terminal value with the Gordon Growth Rate and discount the terminal value with the WACC.
 
 # In[18]:
 
@@ -439,8 +374,6 @@ discounted_future_freecashflow
 print('Discounted future free cashflows with present terminal value:\n {}'.format(discounted_future_freecashflow))
 
 
-# # 8. Implied Value per Share
-# Calcualte the fair value per share.<br>
 
 # In[20]:
 
@@ -466,9 +399,6 @@ fairvalue_per_share
 print('Fair value per share:\n {}'.format(fairvalue_per_share))
 
 
-# # 9. Current Share Price
-# Collect the current market value of the share as basis for our recommendation.
-
 # In[21]:
 
 
@@ -480,9 +410,6 @@ current_shareprice
 print('Current Share Price:\n {}'.format(current_shareprice))
 
 
-# # 10. Recommendation
-# 
-# Display the recommendation of the "Stock Investing Advisor".
 
 # In[22]:
 
@@ -534,6 +461,3 @@ print("")
 print("  -> Current Share Price: " + str(current_shareprice) + " " + str(stock.info["currency"]))
 print("")
 print("---------------------------------------------------")
-
-
-# For a more detailed description of the single code elements please have a look at our [README.md](https://github.com/KRuschmann/Stock_Investing_Advisor/blob/master/README.md)
