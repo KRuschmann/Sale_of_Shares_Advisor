@@ -139,9 +139,6 @@ riskfree_rate = 0.016
 #projection horizon
 years = [1, 2, 3, 4, 5]
 
-#present assumptions
-print('Assumptions\nPerpetual rate: {} \nRiskree rate: {} \nProjection horizon: {}'.format(perpetual_rate, riskfree_rate, years))
-
 
 
 # In[9]:
@@ -172,9 +169,6 @@ for y in range(0,3):
     freecashflow = ebit - tax_expense + depreciation_amortization - capex - change_in_net_working_capital
     free_cashflows_list.append(freecashflow)
 
-#present historical free cashflows of the last three years
-print('Historical free cashflows (past 3 years):\n {}'.format(free_cashflows_list))
-
 
 
 # In[10]:
@@ -185,9 +179,6 @@ print('Historical free cashflows (past 3 years):\n {}'.format(free_cashflows_lis
 #capital structure
 Equity = stock.balance_sheet.loc['Total Stockholder Equity'].iloc[0] / stock.balance_sheet.loc['Total Assets'].iloc[0]
 Dept = stock.balance_sheet.loc['Total Liab'].iloc[0] / stock.balance_sheet.loc['Total Assets'].iloc[0]
-
-#present equity share and dept share
-print('Equity share:\n {} \nDept share:\n {}'.format(Equity, Dept))
 
 
 # In[11]:
@@ -231,10 +222,6 @@ except ValueError:
     yrly_stock_return = yrly_stock_return.dropna(axis=0) #drop NaN in first row
     cost_equity = yrly_stock_return.mean()
 
-cost_equity
-
-#present cost of equity
-print('Cost of equity:\n {}'.format(cost_equity))
 
 
 # In[12]:
@@ -259,8 +246,6 @@ for c in coverage_ratios:
         spread = 0.15
 cost_dept = riskfree_rate + spread
 
-#present cost of dept
-print('Cost of dept:\n {}'.format(cost_dept))
 
 
 # In[13]:
@@ -269,9 +254,6 @@ print('Cost of dept:\n {}'.format(cost_dept))
 #tax shield
 tax_rate = tax_expense / (ebit - stock.financials.loc['Interest Expense'].iloc[0])
 tax_shield = 1 - tax_rate
-tax_shield
-#present tax shield
-print('Tax shield:\n {}'.format(tax_shield))
 
 
 # In[14]:
@@ -280,8 +262,6 @@ print('Tax shield:\n {}'.format(tax_shield))
 #combinded
 WACC = cost_equity * Equity + cost_dept * Dept * tax_shield
 
-#present WACC
-print('WACC:\n {}'.format(WACC))
 
 
 
@@ -304,8 +284,6 @@ elif histcl_cashflow_growthrates[0] <= 0.3:
 else:
     cashflow_growthrate = stats.mean(histcl_cashflow_growthrates)
 
-#present historical cashflow growth rates
-print('Historical cashflow growth rates:\n {}'.format(histcl_cashflow_growthrates))
 
 
 # In[16]:
@@ -320,8 +298,6 @@ for year in years:
         future_freecashflow.append(cashflow)
     else:
         future_freecashflow.append(0)
-#present futere free cashflows (next 5 years)
-print('Future free cashflows (next 5 years):\n {}'.format(future_freecashflow))
 
 
 # In[17]:
@@ -338,9 +314,6 @@ for year in years:
 for x in range(0, len(years)):
     discounted_future_freecashflow.append(future_freecashflow[x] / discountfactor[x])
 
-#present the discounted future free cashflows
-print('Discounted future free cashflows:\n {}'.format(discounted_future_freecashflow))
-
 
 
 # In[18]:
@@ -355,9 +328,6 @@ else:
 #calculate terminal value and discount the terminal value
 terminal_value = future_freecashflow[-1] * (1 + perpetual_rate) / (gordon_growth_rate)
 
-#present terminal value
-print('Terminal value:\n {}'.format(terminal_value))
-
 
 # In[19]:
 
@@ -368,10 +338,7 @@ discounted_terminal_value = terminal_value / discountfactor[-1] ** years[-1]
 #append the discounted future free cashflows list with the discounted terminal value
 discounted_future_freecashflow.append(discounted_terminal_value)
 
-#present the discounted future free cashflows with present terminal value
-discounted_future_freecashflow
 
-print('Discounted future free cashflows with present terminal value:\n {}'.format(discounted_future_freecashflow))
 
 
 
@@ -393,10 +360,7 @@ shares_outstanding = stock.info['sharesOutstanding']
 
 #calculate the value per share
 fairvalue_per_share = round(equity_value / shares_outstanding, 2)
-fairvalue_per_share
 
-# present the fair value per share
-print('Fair value per share:\n {}'.format(fairvalue_per_share))
 
 
 # In[21]:
@@ -404,10 +368,7 @@ print('Fair value per share:\n {}'.format(fairvalue_per_share))
 
 #current stock price
 current_shareprice = stock.info['previousClose']
-current_shareprice
 
-# present the current stock price
-print('Current Share Price:\n {}'.format(current_shareprice))
 
 
 
