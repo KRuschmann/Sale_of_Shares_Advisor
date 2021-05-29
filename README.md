@@ -23,7 +23,10 @@ As this decision requires a highly complex analysis and a considerable amount of
 
 <a name="desc"></a>
 ## 2. General Information
-This student project "Stock Investing Advisor" is part of the course "Programming - Introduction Level" by Mario Silic at the University of St. Gallen (HSG). The purpose of this project is a fundamental analysis of publicly listed companies in order to determine whether a stock is efficiently priced and should therefore be purchased. This is based on an automated process of calculating and analyzing future free cash flows (DCF analysis), which is industry standard in the financial sector and many other industries.
+This student project "Stock Investing Advisor" is part of the course "Programming - Introduction Level" by Mario Silic at the University of St. Gallen (HSG). The purpose of this project is a fundamental analysis of publicly listed companies in order to determine whether a stock is efficiently priced and should therefore be purchased. This is based on an automated process of calculating and analyzing future free cash flows (DCF analysis), which is industry standard in the financial sector and many other industries. <br>
+
+**Please note:** <br>
+You can find the plain code in the Code_SIA_Final.py file. The Code_SIA_Final.ipynb file includes the code with descriptions and further intermediate results.
 
 <a name="usage"></a>
 ## 3. Technologies/Setup
