@@ -76,9 +76,9 @@ def info_check(stock):
     try:
         stock.balance_sheet.loc['Inventory'].iloc[1]
         stock.cashflow.loc['Capital Expenditures'].iloc[1]
-        print("Our 'Sale of Shares Advisor' is appropriate for the chosen stock!")
+        print("Our 'Stock Investing Advisor' is appropriate for the chosen stock!")
     except KeyError:
-        print("Our 'Sale of Shares Advisor' is not appropriate for Banks and Financial Institutions!")
+        print("Our 'Stock Investing Advisor' not appropriate for Banks and Financial Institutions!")
 info_check(stock)
 
 
@@ -217,7 +217,7 @@ print('Historical free cashflows (past 3 years):\n {}'.format(free_cashflows_lis
 # Calculate the Cost of Capital (WACC), the discount rate for the future free cashflows.<br>
 # 
 # **WACC Forumula:**
-# > $ WACC = (D/D+E) * (1-t)*rd + (E/D+E) * (1-t)*re $
+# > WACC = (D/D+E) * (1-t)*rd + (E/D+E) * (1-t)*re
 # 
 # **WACC Parameters:**
 # - WACC = Cost of Capital
@@ -229,6 +229,12 @@ print('Historical free cashflows (past 3 years):\n {}'.format(free_cashflows_lis
 # - rd = Posttax Cost of Dept
 # - re = Cost of Equity
 # - t = Tax Rate
+
+# In[ ]:
+
+
+
+
 
 # In[10]:
 
