@@ -87,7 +87,7 @@ There are multiple approaches to calculate a company's cost of dept. For the sak
 To derive the total WACC, we multiply the respective cost of capital by the proportion of equity or debt in the company and offset the cost of debt against the tax shield. This provides us with the discount rate for the future cashflows.
 
 
-### Step 6: Free Cashflow Projection
+### Step 6: Cashflow Growth Rate & Free Cashflow Projection
 
 Since we do not care about hictorical data, as we are valuing the firm based on the expected future development of the company, we need to predict free cashflows for the projection horizon (in this case for the next 5 years). In order to do that, the program calculates historical cashflow growth rates based on the free cashflows of the past three years (which we calculated in Step 3). To avoid excessively high growth rates due to one-off events, the program takes the lower growth rate or averages out extreme values if necessary.
 
