@@ -55,7 +55,11 @@ Prior to getting started it is vital to install and import all the required libr
 
 The first step is to enter the desired stock ticker (e.g. 'AAPL' for Apple Inc. or 'MSFT' for Microsoft Corporation). Please note that for some smaller companies there is not enough data available to value the stock based on a DCF valuation. In this case, the program will display a corresponding error message.
 
-### Step 2: Assumptions
+### Step 2: Descriptive Statistics & Stock Price Development
+
+After the user has chosen a stock for the valuation the program provides some descriptive statistics such as the mean, standard deviation, variance, minimum and maximum of the stock price and stock trading volume during the last year. Additionally, the program visualizes the adjusted closing price development over the same time period.
+
+### Step 3: Assumptions
 
 In this section the program makes some assumptions that are essential for the excecution of the valuation process.
 
@@ -65,11 +69,11 @@ Furthermore, the program requires the perpetual growth rate as an assumption to 
 
 Finally, a time horizon of ```5 years``` is assumed for the projection of future free cashflows. The shorter the projection period, the larger is the contribution of the terminal value to the total value of the company. On the other hand, an excessively long projection period is also not desirable, as it is extremely difficult to reasonably estimate the individual cash flows for each of the future years. Hence, a time span of 5 years provides a reasonable approach in corporate valuations. This number can of course be customized as desired by the user.
 
-### Step 3: Historical Data & Free Cashflows
+### Step 4: Historical Data & Free Cashflows
 
 The next step is to gather all the historical data of a company that is required for the valuation process. The program automatically collects all the necessary figures (such as historical EBIT, Tax expenses, D&A, Capex and changes in Net Working Capital) from the Yahoo Finance API and calculates the free cashflows of the past three years.
 
-### Step 4: WACC (Cost of Capital)
+### Step 5: WACC (Cost of Capital)
 
 In the fourth step the program derives the cost of capital used for discounting future cashflows. The weighted average cost of capital (WACC) consists of cost of equity and cost of dept.
 
@@ -83,21 +87,21 @@ There are multiple approaches to calculate a company's cost of dept. For the sak
 To derive the total WACC, we multiply the respective cost of capital by the proportion of equity or debt in the company and offset the cost of debt against the tax shield. This provides us with the discount rate for the future cashflows.
 
 
-### Step 5: Free Cashflow Projection
+### Step 6: Free Cashflow Projection
 
 Since we do not care about hictorical data, as we are valuing the firm based on the expected future development of the company, we need to predict free cashflows for the projection horizon (in this case for the next 5 years). In order to do that, the program calculates historical cashflow growth rates based on the free cashflows of the past three years (which we calculated in Step 3). To avoid excessively high growth rates due to one-off events, the program takes the lower growth rate or averages out extreme values if necessary.
 
 To take into account the difference between future and present value of free cashflows, the program discounts every single cashflow of each year in the projection horizon back to the present value, using the weighted average cost of capital (WACC) that we calculated in the last step.
 
-### Step 6: Terminal Value
+### Step 7: Terminal Value
 
 To account for the 'going concern principle' (the assumption that the company will continue to exist in the future), we need to calculate the terminal value of the firm. Therefore, the program takes the last projected free cashflow (in this case the cashflow of year 5), grows it by the perpetual growth rate and uses the 'Gordon growth formula' to calculate the perpetual value. Discounting this value back to the present value provides us with the terminal value of the company.
 
-### Step 7: Implied Value per Share
+### Step 8: Implied Value per Share
 
 To arrive at the implied value per share, we need to sum up the present values of the projected free cashflows and the terminal value. As we are interested in the equity value of the firm, the program adds the value of the cash from the company's balance sheet and deducts the value of total dept. Dividing this value by the number of shares outstanding we obtain the fair value per share based on our prediction of the development of the firm's future free cashflows.
 
-### Step 8: Recommendation
+### Step 9: Recommendation
 
 In the last step the program provides the user with a recommendation. Depending on the difference between the implied value per share and the current market value of the share, the program indicates whether it considers the stock to be undervalued, overvalued or efficiently priced. In addition, based on this calculation, the program recommends holding, selling or buying the share.
 
