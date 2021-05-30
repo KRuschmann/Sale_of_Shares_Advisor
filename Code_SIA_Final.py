@@ -1,10 +1,22 @@
-#!/usr/bin/env python
-# coding: utf-8
+####################################################################################
+# Programming group project:
+# STOCK INVESTING ADVISOR
+#
+# Lucas Jutzi
+# Lukas Kevic-Niederer
+# Katharina Ruschmann
+# Samuel Weber
+#
+# The code for this project was written in Python using JupytherLab
+#
+# For more detailed descriptions and background information, please visit
+# https://github.com/KRuschmann/Stock_Investing_Advisor
+####################################################################################
 
 
 # 0. FRAMEWORK
 
-#import libraries
+#import required libraries
 import numpy as np
 import pandas as pd
 import yfinance as yf
@@ -17,7 +29,7 @@ import matplotlib.pyplot as plt
 
 # 1. INPUT
 
-#identify stock and test whether input is valid stock ticker
+#identify stock and test whether input is a valid stock ticker
 while True:
     try:
         stock_input = input("Enter Stock Ticker: ")
@@ -30,7 +42,7 @@ while True:
         break
 
 
-#test if target company is financial institution
+#test if target company is a financial institution
 def info_check(stock):
     """
     checks if the chosen stock is valid and appropriate for the firm valuation with the DCF method
