@@ -29,8 +29,6 @@ while True:
     else:
         break
 
-        
-stock = yf.Ticker(stock_input)
 
 #test if target company is financial institution
 def info_check(stock):
