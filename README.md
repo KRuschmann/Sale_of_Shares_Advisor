@@ -10,8 +10,9 @@ As this decision requires a highly complex analysis and a considerable amount of
 2. [ General Information ](#desc)
 3. [ Technologies/Setup ](#usage)
 4. [ Code Structure ](#code)
-5. [ Disclaimer ](#discl)
-6. [ Appendix: Libraries Description ](#app)
+5. [ Screenshots ](#scrn)
+6. [ Disclaimer ](#discl)
+7. [ Appendix: Libraries Description ](#app)
 
 
 <a name="memb"></a>
@@ -114,13 +115,20 @@ Collect the current market value of the share as basis for the recommendation of
 In the last step the program provides the user with a recommendation. Depending on the difference between the implied value per share and the current market value of the share, the program indicates whether it considers the stock to be undervalued, overvalued or efficiently priced. In addition, based on this calculation, the program recommends holding, selling or buying the share.
 
 
+<a name="scrn"></a>
+## 5. Screenshots
+Below, you can find screenshots from the Stock Investig Advisor and example inputs for the program. You can click on the thumbnails to download the full size images. 
+
+<img src="https://github.com/KRuschmann/Stock_Investing_Advisor/blob/e44c285ca081601dbd4896461484b13b91da1fe6/screenshots/Title.png" width=300" height="225">  <br>
+
+
 <a name="discl"></a>
-## 5. Disclaimer
+## 6. Disclaimer
 This valuation model is based on the anticipation of future free cash flows. As with any intrinsic valuation method, it is essential to bear in mind that valuations are not equally applicable to all businesses. While some companies do not even meet the required criteria (e.g. generating positive cash flows), other companies' values are not directly linked to the generation of free cash flows (e.g. Tesla and other companies that are experiencing hype for various reasons). Therefore, it is important to consider the individual context of each company in order to correctly implement the output of this DCF valuation. The delivered value should never be considered as an isolated basis in any decision-making process.
 
 
 <a name="app"></a>
-## 6. Appendix: Library Description
+## 7. Appendix: Library Description
 
 ### Pandas:
 
