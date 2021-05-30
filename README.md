@@ -133,7 +133,8 @@ Below, you can find screenshots from the Stock Investig Advisor and example inpu
 <br>
 <img align="left" src="https://github.com/KRuschmann/Stock_Investing_Advisor/blob/d151f4685a3cdabaf2f918bf35e530fb2ed17bac/screenshots/Geographics.png" width="300" height="169">
 <img align="right" src="https://github.com/KRuschmann/Stock_Investing_Advisor/blob/d151f4685a3cdabaf2f918bf35e530fb2ed17bac/screenshots/Example%20inputs.png" width="300" height="169">
-
+<br>
+<br>
 
 
 <a name="discl"></a>
