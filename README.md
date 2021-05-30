@@ -119,8 +119,8 @@ In the last step the program provides the user with a recommendation. Depending 
 ## 5. Screenshots
 Below, you can find screenshots from the Stock Investig Advisor and example inputs for the program. You can click on the thumbnails to download the full size images. 
 
-<p align="center"> <img src="https://github.com/KRuschmann/Stock_Investing_Advisor/blob/e44c285ca081601dbd4896461484b13b91da1fe6/screenshots/Title.png" width="300" height="169">
-<p align="center"> <img src="https://github.com/KRuschmann/Stock_Investing_Advisor/blob/d151f4685a3cdabaf2f918bf35e530fb2ed17bac/screenshots/Input.png" width="300" height="169">
+<p align="left"> <img src="https://github.com/KRuschmann/Stock_Investing_Advisor/blob/e44c285ca081601dbd4896461484b13b91da1fe6/screenshots/Title.png" width="300" height="169">
+<p align="right"> <img src="https://github.com/KRuschmann/Stock_Investing_Advisor/blob/d151f4685a3cdabaf2f918bf35e530fb2ed17bac/screenshots/Input.png" width="300" height="169">
 <br>
 <br>
 <img align="left" src="https://github.com/KRuschmann/Stock_Investing_Advisor/blob/d151f4685a3cdabaf2f918bf35e530fb2ed17bac/screenshots/Feedback.png" width="300" height="169"> 
